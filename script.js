@@ -1,3 +1,8 @@
+
+
+
+
+
 window.requestAnimationFrame =
     window.__requestAnimationFrame ||
         window.requestAnimationFrame ||
@@ -30,7 +35,9 @@ var init = function () {
     var height = canvas.height = koef * innerHeight;
     var rand = Math.random;
     ctx.fillStyle = "rgba(0,0,0,1)";
-    ctx.fillRect(0, 0, width, height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+   
+   
 
     var heartPosition = function (rad) {
         //return [Math.sin(rad), Math.cos(rad)];
@@ -144,3 +151,5 @@ var init = function () {
 var s = document.readyState;
 if (s === 'complete' || s === 'loaded' || s === 'interactive') init();
 else document.addEventListener('DOMContentLoaded', init, false);
+
+
